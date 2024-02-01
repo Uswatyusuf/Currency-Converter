@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency-Converter</title>
+    <link rel="stylesheet" href="pages/converter.css">
+</head>
+<body>
+    <!-- Heading for the Currency Converter -->
+  <h1 class="heading">Currency Converter.</h1>
+  <!-- Container for all the form elements --> 
+    <div class="container">
+   <!-- Label and dropdown for selecting the currency to be converted from -->
+        <div class="fromlabel">
+            <label for="from">From:</label><br>
+            <select id="fromcurrency" class="select" name="select"><option>select</option></select>
+        </div> 
+<!-- Input field for the user to enter the value to be converted -->
+        <div class="input">
+        <p>Input value:</p>
+        <input type="text" name="" id="numbertoconvert" class="input" onkeydown="if(event.keyCode==13) currencyconverter()">
+    </div>  
+<!-- Label and dropdown for selecting the currency to be converted to -->          
+    <div class="tolabel">
+        <label for="from">To:</label><br>
+        <select id="tocurrency" class="select" name="select"><option>select</option></select>
+    </div>  
+  <!-- Result label and input field for displaying the converted amount --> 
+    <div class="amount">
+    <p>Result:</p>
+    <input type="text"  id="result" name="result" disabled>
+</div>
+<!-- Button for triggering the conversion function -->    
+<div class="convertbtn">
+<input type="submit" value="Convert" onclick="currencyconverter()" class="convert_btn">
+</div>      
+
+</div>
+
+<!-- External JavaScript file for handling the conversion -->
+  <script src="/pages/converter.js"></script>
+</body>
+</html>
